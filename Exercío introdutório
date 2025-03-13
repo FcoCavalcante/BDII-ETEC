@@ -1,0 +1,27 @@
+CREATE DATABASE IF NOT EXISTS escola;
+USE escola;
+
+
+-----------------------------------------------------------
+CREATE TABLE alunos (
+	id INT auto_increment primary key,
+    nome varchar(50),
+    idade INT,
+    nota DECIMAL(4,2)
+);
+
+--------------------------------------------------------
+INSERT INTO alunos (nome, idade, nota) VALUES
+('Ana Silva', 15, 8.5),
+('Bruno Correa', 16, 7.5),
+('Carla Mendes', 14, 9.0),
+('Diego Oliveira', 15, 6.0),
+('Eduarda Santos', 16, 5.5),
+('Felipe Gomes', 16, 7.7),
+('Giovana Almeida', 14, 9.5),
+('Henrique Lima', 15, 4.5),
+('Isabela Rocha', 16, 6.4);
+SELECT nome FROM alunos;
+SELECT nome, nota FROM alunos;
+SELECT nome, idade, nota FROM alunos where id = 5;
+SELECT nome, nota FROM alunos WHERE nota >= 6;
